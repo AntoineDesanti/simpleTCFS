@@ -9,6 +9,7 @@ on:
 
 jobs:
   Backend_build: 
+  steps:
     runs-on: ubuntu-20.04
       - name: Build the backend
         working-directory: ./backend
