@@ -1,9 +1,9 @@
 name: Backend
 
 on:
-  push:
+  pull_request:
     branches:
-      - feature/**
+      - develop
     paths:
       - backend/**
 
