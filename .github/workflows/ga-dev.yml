@@ -1,0 +1,25 @@
+name: Dev CI
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - backend/**
+
+jobs:
+  config:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/static-actions.yml
+
+
+  test:
+    runs-on: ubuntu-20.04
+    needs: [ build ]
+
+    steps:
+      - name: Test the backend
+        working-directory: ./backend
+        run: mvn clean test
