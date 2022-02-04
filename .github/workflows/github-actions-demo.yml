@@ -9,6 +9,7 @@ on:
 
 jobs:
   Backend_build: 
+    runs-on: ubuntu-20.04
       - name: Build the backend
         working-directory: ./backend
         run: mvn clean install
@@ -42,6 +43,8 @@ jobs:
         working-directory: ./backend
         run: mvn clean test
   Backend_coverage_badge:
+    runs-on: ubuntu-20.04
+    steps:
       - name: Generate the backend coverage badge
         uses: cicirello/jacoco-badge-generator@v2
         with:
