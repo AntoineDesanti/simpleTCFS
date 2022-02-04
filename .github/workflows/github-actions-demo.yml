@@ -9,8 +9,8 @@ on:
 
 jobs:
   Backend_build: 
-  steps:
     runs-on: ubuntu-20.04
+    steps:
       - name: Build the backend
         working-directory: ./backend
         run: mvn clean install
