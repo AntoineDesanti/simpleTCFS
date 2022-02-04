@@ -2,7 +2,8 @@ name: "Configure environment and compile backend"
 
 on:
   workflow_call:
-    branches: [ * ]
+    path:
+      - backend/**
 
 jobs:
   config:
