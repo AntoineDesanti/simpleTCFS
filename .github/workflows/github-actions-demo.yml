@@ -41,7 +41,7 @@ jobs:
       - name: Test the backend
         working-directory: ./backend
         run: mvn clean test
-    Backend_coverage_badge:
+  Backend_coverage_badge:
       - name: Generate the backend coverage badge
         uses: cicirello/jacoco-badge-generator@v2
         with:
