@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ./github/workflows/static-actions.yml
+      - uses: ./.github/workflows/static-actions.yml
 
   test:
     runs-on: ubuntu-20.04
