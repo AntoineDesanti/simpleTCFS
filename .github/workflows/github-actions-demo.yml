@@ -8,7 +8,7 @@ on:
       - backend/**
 
 jobs:
- Backend_build: 
+  Backend_build: 
       - name: Build the backend
         working-directory: ./backend
         run: mvn clean install
